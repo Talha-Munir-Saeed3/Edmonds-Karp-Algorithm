@@ -86,4 +86,76 @@ The visual script steps through the entire lifecycle of the graph:
 [1. Initial Graph] ──> [2. Augmenting Paths 1..k] ──> [3. Final Flow State] ──> [4. Min-Cut Highlight]
 (Capacities only)       (Green highlight + metrics)     (Flow / Capacity format)   (Dashed red cut edges)
 
+```
+
+- **Green Nodes:** Source vertex (`s`)
+- **Red Nodes:** Sink vertex (`t`)
+- **Light Blue Nodes:** Intermediate routing vertices
+- **Thick Green Directed Edges:** Currently active augmenting path
+- **Dashed Red Edges:** Discovered critical edges forming the minimum cut
+
+---
+
+## 🚀 Quickstart Guide
+
+### 🐍 Python Visualizer
+
+#### 1. Setup Environment
+```bash
+git clone [https://github.com/your-username/flow-network-suite.git](https://github.com/your-username/flow-network-suite.git)
+cd flow-network-suite
+pip install numpy networkx matplotlib
+```
+
+#### 2. Run the Visualizer
+```bash
+python "Project Final.py"
+```
+
+---
+
+### ⚡ C++ Engine
+
+#### 1. Compile
+```bash
+g++ -std=c++11 -O3 Project.cpp -o flow_engine
+```
+
+#### 2. Run
+```bash
+./flow_engine
+```
+
+#### Expected Terminal Output
+```text
+Max Flow: 6
+0 - 1 is the min cut
+5 - 8 is the min cut
+7 - 8 is the min cut
+```
+
+---
+
+## 🔬 Computational Complexity
+
+| Metric | Edmonds-Karp Algorithm |
+| :--- | :--- |
+| **Time Complexity** | O(V * E^2) |
+| **Space Complexity (Python)** | O(V^2) via NumPy matrices |
+| **Space Complexity (C++)** | O(V^2) statically allocated via `Max_V = 100` |
+| **Min-Cut Search Time** | O(V + E) via residual DFS |
+
+---
+
+## 🛠 Future Enhancements
+
+- [ ] Implement Dinic's Algorithm for O(V^2 * E) performance on larger networks.
+- [ ] Add GUI controls (pause, next, previous) for graph traversal steps.
+- [ ] Add support for loading graphs from `.csv` and `.json` edge lists.
+
+---
+
+## 📝 License
+
+This project is open-source and licensed under the [MIT License](LICENSE).
 
