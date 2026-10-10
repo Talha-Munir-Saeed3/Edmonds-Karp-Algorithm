@@ -50,7 +50,7 @@ This repository provides two coordinated implementations of the **Edmonds-Karp A
 ## 🧠 Core Algorithms & Data Structures
 
 <details open>
-<summary><b>1. Edmonds-Karp Max-Flow ($O(V \cdot E^2)$)</b></summary>
+<summary><b>1. Edmonds-Karp Max-Flow </b></summary>
 <br>
 
 Rather than arbitrary augmenting path selection (which can cycle indefinitely on irrational capacities), Edmonds-Karp uses **Breadth-First Search (BFS)** to guarantee finding the path with the fewest edges:
